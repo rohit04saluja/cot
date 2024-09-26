@@ -48,8 +48,8 @@ class TestNexus9000v(PlatformTests.PlatformTest):
     def test_memory_amount(self):
         """Test RAM allocation limits."""
         self.assertRaises(ValueTooLowError,
-                          self.ins.validate_memory_amount, 8191)
-        self.ins.validate_memory_amount(8192)
+                          self.ins.validate_memory_amount, 6143)
+        self.ins.validate_memory_amount(6144)
         self.ins.validate_memory_amount(16384)
         # No upper bound known at present
 
