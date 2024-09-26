@@ -40,8 +40,8 @@ class TestNexus9000v(PlatformTests.PlatformTest):
 
     def test_cpu_count(self):
         """Test CPU count limits."""
-        self.assertRaises(ValueTooLowError, self.ins.validate_cpu_count, 0)
-        self.ins.validate_cpu_count(1)
+        self.assertRaises(ValueTooLowError, self.ins.validate_cpu_count, 1)
+        self.ins.validate_cpu_count(2)
         self.ins.validate_cpu_count(4)
         self.assertRaises(ValueTooHighError, self.ins.validate_cpu_count, 5)
 

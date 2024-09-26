@@ -31,7 +31,7 @@ class Nexus9000v(Platform):
 
     HARDWARE_LIMITS = Platform.HARDWARE_LIMITS.copy()
     HARDWARE_LIMITS.update({
-        Hardware.cpus: ValidRange(1, 4),
+        Hardware.cpus: ValidRange(2, 4),
         Hardware.memory: ValidRange(6144, None),
         Hardware.nic_count: ValidRange(1, 65),
         Hardware.serial_count: ValidRange(1, 1),
